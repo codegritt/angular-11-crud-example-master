@@ -32,7 +32,7 @@ export class AddEditComponent implements OnInit {
             passwordValidators.push(Validators.required);
         }
 
-        const formOptions: AbstractControlOptions = { validators: MustMatch('password', 'confirmPassword') };
+        const formOptions: AbstractControlOptions = { };
         this.form = this.formBuilder.group({
             title: ['', Validators.required],
             firstName: ['', Validators.required],
@@ -40,7 +40,7 @@ export class AddEditComponent implements OnInit {
             email: ['', [Validators.required, Validators.email]],
             
             password: ['', [Validators.minLength(6), this.isAddMode ? Validators.required : Validators.nullValidator]],
-            confirmPassword: ['', this.isAddMode ? Validators.required : Validators.nullValidator]
+            
         }, formOptions);
 
         if (!this.isAddMode) {
