@@ -14,7 +14,7 @@ let users: any[] = usersJSON ? JSON.parse(usersJSON) : [{
     firstName: 'Joe',
     lastName: 'Bloggs',
     email: 'joe@bloggs.com',
-    role: Role.User,
+    
     password: 'joe123'
 }];
 
