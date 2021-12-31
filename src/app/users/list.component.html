@@ -3,7 +3,8 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th style="width: 30%">Name</th>
+            <th style="width: 30%">FirstName</th>
+            <th style="width: 30%">LastName</th>
             <th style="width: 30%">Email</th>
             
             <th style="width: 10%">Action</th>
@@ -11,7 +12,8 @@
     </thead>
     <tbody>
         <tr *ngFor="let user of users">
-            <td>{{user.title}} {{user.firstName}} {{user.lastName}}</td>
+            <td>{{user.title}} {{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
             <td>{{user.email}}</td>
             
             <td style="white-space: nowrap">
