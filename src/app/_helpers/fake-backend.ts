@@ -5,7 +5,6 @@ import { delay, materialize, dematerialize } from 'rxjs/operators';
 
 import { Role } from '@app/_models';
 
-// array in local storage for registered users
 const usersKey = 'angular-11-crud-example-users';
 const usersJSON = localStorage.getItem(usersKey);
 let users: any[] = usersJSON ? JSON.parse(usersJSON) : [{
@@ -125,7 +124,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 }
 
 export const fakeBackendProvider = {
-    // use fake backend in place of Http service for backend-less development
+    
     provide: HTTP_INTERCEPTORS,
     useClass: FakeBackendInterceptor,
     multi: true
